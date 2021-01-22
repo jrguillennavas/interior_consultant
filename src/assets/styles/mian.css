@@ -1,0 +1,194 @@
+:root {
+    --letter-monserrat: 'Montserrat', sans-serif;
+    --letter-lora: 'Lora', serif;
+    --back-color: #181719;
+    --leter-color: #fff; 
+    
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: var( --back-color);
+}
+.layout{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+
+    grid-template-areas: "head"
+                         "cont"
+                         "foor";
+}
+
+/*  header  */
+.head{
+    grid-area: head;
+    color: var(--leter-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+
+}
+.head__title{
+    color: var(--leter-color);
+    font-size: 1.4rem;
+    border: 1px solid;
+    padding: .5rem;
+}
+
+/*  nav  */
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var( --back-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 450ms;
+}
+.navbar__icon{
+    color: var(--leter-color);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.navbar__element{
+    padding: 2rem 0;
+    list-style: none;
+}
+.navbar__item{
+    font-size: 1.8rem;
+    color: var(--leter-color);
+    font-family: var(--letter-monserrat);
+}
+
+
+/*  main  */
+.main{
+    height: 80vh;
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    
+    grid-template-areas: "info"
+                         "banner";
+}
+/*  main --> section info  */
+.info{
+    grid-area: info;
+    color: var(--leter-color);
+    padding-left: 1.5rem;
+}
+.info__title{
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.6rem;
+}
+.info__description{
+    font-family: var(--letter-monserrat);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: normal;
+    margin: 2rem 0;
+}
+.info__btn{
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    margin-bottom: 2.5rem;
+}
+.info__send{
+    font-size: 1.4rem;
+    font-family: var(--letter-monserrat);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--leter-color);
+    margin-right: 1rem;
+}
+
+/*  main --> section banner  */
+.banner{
+    grid-area: banner;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+.banner__photo{
+    width: 100%;
+}
+
+/*  main --> section banner --> div designer  */
+.designer{
+    width: 30rem;
+    height: 13rem;
+    margin-top: -6rem;
+    background-color: var( --back-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--leter-color);
+    padding-left: 2rem;
+}
+
+/*  main --> section banner --> div designer --> div avatar */
+.avatar{
+    display: flex;
+    align-items: center;
+}
+.avatat__conten{
+    margin-left: 2rem;
+}
+.avatar__photo{
+    width: 6rem;
+    border-radius: 50%;
+}
+.avatar__name{
+    font-family: var(--letter-monserrat);
+    font-size: 1.2rem;
+}
+.avatar__prof{
+    font-family: var(--letter-monserrat);
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+}
+/*  main --> section banner --> div designer --> h3 description */
+.designer__description{
+    font-family: var( --letter-lora);
+    font-size: 1.8rem;
+}
+
+/*  footer */
+.foor{
+    grid-area: foor;
+    color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--letter-monserrat);
+    font-style: normal;
+    font-weight: 600;
+    font-size: .8rem;
+}

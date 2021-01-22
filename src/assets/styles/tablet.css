@@ -1,0 +1,10 @@
+/*  main  */
+.main{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "info banner";
+    align-items: center;
+}
